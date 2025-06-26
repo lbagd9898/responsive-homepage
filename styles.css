@@ -14,6 +14,7 @@ body {
 
 body {
   font-family: "Lato", serif;
+  position: relative;
 }
 
 header {
@@ -26,7 +27,8 @@ header {
 }
 
 .container {
-  position: fixed;
+  position: absolute;
+  z-index: 10;
   width: auto;
   top: clamp(175px, 20vh, 700px);
   left: 50%;
@@ -54,7 +56,11 @@ header > *:not(#banner) {
 }
 
 main {
-  background-color: pink;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
 }
 
 #about-me {
@@ -123,6 +129,55 @@ header img {
   white-space: nowrap;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-template-rows: repeat(2, 250px);
+  grid-gap: 20px;
+}
+
+.card {
+  box-shadow: 3px 3px 10px 1px silver;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 3fr 1fr 2fr;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.card > * {
+  padding: 10px;
+}
+
+main h2 {
+  align-self: flex-start;
+}
+
+.align {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.align img {
+  width: 20px;
+}
+
+.align.left {
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.proj-icon {
+  background-color: pink;
+}
+
+.proj-text {
+  color: var(--dark-gray);
+}
+
 /* tablet layout */
 @media (max-width: 1275px) and (min-width: 600px) {
   .container > * {
@@ -140,21 +195,42 @@ header img {
     left: 95%;
     transform: translate(15%, 0%);
   }
+
+  .grid {
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: repeat(3, 250px);
+  }
 }
 
 /* mobile layout */
 @media (max-width: 599px) {
   header {
-    height: clamp(500px, 70vh, 900px);
+    height: clamp(500px, 550px, 700px);
   }
 
   #image img {
     width: 15rem;
+    float: none;
+  }
+
+  #image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
   #about-me {
     width: clamp(15rem, 70vw, 80vw);
     box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+  }
+
+  #about-me > * {
+    margin: 0px;
   }
 
   #banner {
@@ -163,7 +239,7 @@ header img {
 
   .bubble-text {
     font-size: 2rem;
-    white-space: normal;
+    white-space: nowrap;
     top: 85%;
   }
 
@@ -176,18 +252,24 @@ header img {
   }
 
   #icons {
-    position: fixed;
+    /* position: fixed;
     top: clamp(480px, 490px, 500px);
     left: 50%;
     transform: translateX(-50%);
-    min-width: 39px;
+    min-width: 39px; */
     display: flex;
     gap: 0.75em;
     flex-wrap: nowrap;
+    position: static;
   }
 
   #icons img {
     width: 30px;
     height: 30px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(1, 300px);
+    grid-template-rows: repeat(6, 300px);
   }
 }
