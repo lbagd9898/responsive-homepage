@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Bokor&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Kablammo&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Oxanium:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Bokor&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Kablammo&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Oxanium:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Bokor&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Hanuman:wght@100..900&family=Kablammo&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libertinus+Math&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Noto+Kufi+Arabic:wght@100..900&family=Oxanium:wght@200..800&family=Rubik:ital,wght@0,300..900;1,300..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --blue-primary: #4169e1;
   --dark-gray: #787878;
@@ -13,7 +13,7 @@ body {
 }
 
 body {
-  font-family: "Lato", serif;
+  font-family: "Libertinus Math", system-ui;
   position: relative;
 }
 
@@ -90,12 +90,6 @@ p {
   text-align: justify;
 }
 
-header img {
-  width: clamp(12rem, 20vw, 18rem);
-  height: 100%;
-  box-shadow: 2px 2px 10px 1px silver;
-}
-
 #icons img {
   width: 20px;
 }
@@ -114,14 +108,17 @@ header img {
 
 #image img {
   float: left;
+  width: clamp(12rem, 18vw, 18rem);
+  height: 100%;
+  box-shadow: 2px 2px 10px 1px silver;
 }
 
 .bubble-text {
   font-weight: 900;
-  font-family: "Lato", serif;
+  font-family: "Libertinus Math", system-ui;
   font-size: clamp(1.5rem, 2vw, 1.7rem);
   color: white;
-  -webkit-text-stroke: 0.5px black;
+  /* -webkit-text-stroke: 0.2px black; */
   position: absolute;
   top: 90%;
   left: 50%;
@@ -229,7 +226,7 @@ picture {
   #image {
     float: left;
     translate: -10px -10px;
-    margin: -20px 0px;
+    margin: -10px 0px;
   }
 
   .bubble-text {
@@ -245,6 +242,10 @@ picture {
 
   #img-div img {
     width: 225px;
+  }
+
+  p {
+    text-align: left;
   }
 }
 
